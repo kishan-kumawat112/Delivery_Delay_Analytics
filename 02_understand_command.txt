@@ -1,0 +1,35 @@
+UNDERSTANDING THE COMMANDS 
+
+| Command                 | What it does                                                                                                      |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `pd.read_csv()`         | Loads a CSV file into a Pandas DataFrame.                                                                         |
+| `df.head()`             | Displays the first five rows of the DataFrame.                                                                    |
+| `df.shape`              | Returns the number of rows and columns.                                                                           |
+| `df.columns`            | Displays the names of all columns.                                                                                |
+| `df.info()`             | Shows column names, data types, and non-null counts.                                                              |
+| `df.isnull().sum()`     | Counts missing values in each column.                                                                             |
+| `df.duplicated().sum()` | Counts the number of duplicate rows.                                                                              |
+| `df.describe()`         | Displays statistical information about numerical columns,                                                         |
+|                         |   such as mean, standard deviation, minimum, and maximum.                                                         |
+|---------------------------------------------------------------------------------------------------------------------------------------------|
+
+|---------------------------------------------------------------------------------|
+| Command          | What it does                                                 |
+| ---------------- | ------------------------------------------------------------ |
+| `value_counts()` | Counts how many times each unique value appears in a column. |
+| `dropna=False`   | Includes missing values (`NaN`) when counting values.        |
+|---------------------------------------------------------------------------------|
+
+|-----------------------------------------------------------------------------------------------------------------------------|
+| Command                     | Your output        | Meaning                                                                  |
+| --------------------------- | ------------------ | ------------------------------------------------------------------------ |
+| `len(df)`                   | `2510`             | The dataset contains 2,510 rows, including duplicate records.            |
+| `df["Warehouse"].nunique()` | `4`                | There are 4 unique warehouses.                                           |
+| `df["Carrier"].unique()`    | `4 carriers + NaN` | Four delivery carriers are present, and some carrier values are missing. |
+|-----------------------------------------------------------------------------------------------------------------------------|
+
+
+fillna("Unknown") replaces missing text values with "Unknown".
+median() calculates the middle value of the distance data.
+fillna() replaces missing distances with that median.
+isnull().sum() checks how many missing values remain.
