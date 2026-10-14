@@ -77,7 +77,7 @@ st.sidebar.title("⚙️ Dashboard Controls")
 
 DATA_PATH = (
     Path(__file__).resolve().parent
-    / "data"
+    / "Data"
     / "cleaned_delivery_dataset.csv"
 )
 
