@@ -1,132 +1,138 @@
-# Delivery Delay Analytics Dashboard
+# 🚚 Delivery Delay Analytics Dashboard
 
-## Project Overview
+An interactive data analytics dashboard built with **Python, Pandas, Streamlit, and Plotly** to explore delivery performance, identify delay patterns, compare carriers and warehouses, and generate actionable business insights.
 
-Delivery Delay Analytics is a Python-based data analytics project that
-explores delivery performance using an interactive Streamlit dashboard.
-It helps users review delivery status, compare carriers and warehouses,
-examine delivery trends, and export analysis results.
+## 📌 Project Overview
 
-> **Dataset note:** The project uses a synthetic dataset for learning
-> and demonstration. Results should not be interpreted as verified
-> findings from a real company.
+Delivery Delay Analytics is a data analytics project designed to understand delivery performance through interactive visualizations and key performance indicators (KPIs).
 
-## Features
+The dashboard allows users to explore delivery status, compare shipping performance, analyze trends, and download filtered data and business insights.
 
--   Delivery status overview and key performance indicators (KPIs)
--   Carrier performance comparison
--   Warehouse performance ranking
--   Shipping-mode performance analysis
--   Delivery trend analysis
--   Distance versus delivery-delay visualization
--   Rule-based business recommendations
--   CSV download of the filtered delivery dataset
--   CSV download of business insights
+> **Dataset Disclaimer:** This project uses a synthetic dataset for educational and demonstration purposes. The results do not represent verified findings from a real company.
 
-## Technologies Used
+## 📸 Dashboard Screenshots
 
--   Python
--   Pandas
--   Streamlit
--   Plotly
+### Overview
+![Dashboard Overview](screenshots/overview.png)
 
-## Project Structure
+### Carrier and Warehouse Performance
+![Performance Analysis](screenshots/performance.png)
 
-The project currently uses a `Data` folder (capital **D**). Keep the
-folder and filename capitalization consistent with the paths used in
-`dashboard.py`.
+### Trends and Insights
+![Trends and Insights](screenshots/trends-insights.png)
 
-``` text
+### Data Explorer
+![Data Explorer](screenshots/data-explorer.png)
+
+## ✨ Key Features
+
+- 📊 Delivery status overview and key performance indicators
+- 🚚 Carrier performance comparison
+- 🏭 Warehouse performance ranking
+- 📦 Shipping-mode performance analysis
+- 📈 Delivery trend analysis
+- 📍 Distance versus delivery-delay visualization
+- 💡 Rule-based business recommendations
+- 🔎 Interactive filters for exploring delivery data
+- 📥 CSV downloads for filtered data and business insights
+
+## 🛠️ Technologies Used
+
+- **Python** — Core programming language
+- **Pandas** — Data processing and analysis
+- **Streamlit** — Interactive dashboard development
+- **Plotly** — Interactive charts and visualizations
+
+## 📁 Project Structure
+
+```text
 Delivery_Delay_Analytics/
-├── .vscode/
 ├── Data/
 │   ├── cleaned_delivery_dataset.csv
 │   └── delivery_delay_dataset.csv
-├── 01_introduction.txt
-├── 02_main.py
-├── 02_understand_command.txt
-├── 03_open_command.txt
+├── screenshots/
+│   ├── overview.png
+│   ├── performance.png
+│   ├── trends-insights.png
+│   └── data-explorer.png
 ├── dashboard.py
-├── dashboard_backup.py
 ├── requirements.txt
 └── README.md
 ```
 
-The tree above reflects the files shown in the project screenshot. You
-can omit `dashboard_backup.py`, `.vscode/`, or learning notes from a
-public repository if they are not needed to run the project.
+*This is a simplified structure of the main project files. Other learning files and configuration folders may also be present.*
 
-## Setup and Installation
+## ⚙️ Installation and Setup
 
-1.  Install Python.
+### 1. Clone the repository
 
-2.  Open a terminal in the project folder.
-
-3.  Install the required libraries:
-
-    ``` bash
-    pip install -r requirements.txt
-    ```
-
-4.  Start the dashboard:
-
-    ``` bash
-    python -m streamlit run dashboard.py
-    ```
-
-5.  Open the local URL shown in the terminal.
-
-## Requirements
-
-The dashboard uses Streamlit, Pandas, and Plotly. The `requirements.txt`
-file should list the packages imported by the project. Add any
-additional third-party packages that your code requires.
-
-## Dataset
-
-The `Data` folder contains the CSV files used for the project. Confirm
-that `dashboard.py` reads the intended file, for example:
-
-``` python
-pd.read_csv("Data/cleaned_delivery_dataset.csv")
+```bash
+git clone https://github.com/kishan-kumawat112/Delivery_Delay_Analytics.git
 ```
 
-Use the exact path that appears in your own code. File and folder
-capitalization can matter on hosting platforms.
+### 2. Open the project folder
 
-## How the Analysis Works
+```bash
+cd Delivery_Delay_Analytics
+```
 
-The dashboard calculates delivery delay by comparing the actual delivery
-date with the promised delivery date. Delivery status is classified as:
+### 3. Install dependencies
 
--   **Late:** Actual delivery date is after the promised date.
--   **On Time:** Actual delivery date matches the promised date.
--   **Early:** Actual delivery date is before the promised date.
+```bash
+pip install -r requirements.txt
+```
 
-The dashboard's business recommendations are rule-based suggestions to
-help identify areas for investigation; they do not establish the cause
-of a delay.
+### 4. Run the dashboard
 
-## Learning Outcomes
+```bash
+python -m streamlit run dashboard.py
+```
 
--   Data analysis with Pandas
--   KPI calculation and aggregation
--   Interactive dashboards with Streamlit
--   Data visualization with Plotly
--   Filtered analysis and CSV export
--   Communicating findings as business insights
+### 5. Open the dashboard
 
-## Future Improvements
+Open the local URL displayed in your terminal, usually:
 
--   Add automated tests for data processing and filtering
--   Improve error handling for missing or invalid data
--   Add more detailed route-level analysis
--   Deploy the dashboard online
--   Add screenshots of the dashboard to this README
+```text
+http://localhost:8501
+```
 
-## Author
+## 📂 Dataset
 
-Name = Kishan lal Kumawat 
-Email I'd = wwwkishu112@gmail.com
-Mobile Number = 7073919377
+The project includes CSV files in the `Data/` directory. The dashboard should use the dataset path configured in `dashboard.py`.
+
+The analysis explores delivery dates, delivery status, carriers, warehouses, shipping modes, distance, and delay patterns, depending on the fields available in the dataset.
+
+## 🔍 How the Analysis Works
+
+The dashboard compares the actual delivery date with the promised delivery date to classify delivery outcomes:
+
+- **Late:** Actual delivery occurs after the promised date.
+- **On Time:** Actual delivery occurs on the promised date.
+- **Early:** Actual delivery occurs before the promised date.
+
+The dashboard also presents comparisons and rule-based recommendations to help identify areas for further investigation. These recommendations do not prove the underlying cause of a delay.
+
+## 🎓 Learning Outcomes
+
+- Data analysis and manipulation using Pandas
+- KPI calculation and aggregation
+- Interactive dashboard development with Streamlit
+- Data visualization using Plotly
+- Data filtering and CSV export
+- Communicating analytical findings through business insights
+
+## 🚀 Future Improvements
+
+- Deploy the dashboard online
+- Add automated tests for data processing
+- Improve handling of missing and invalid data
+- Expand route-level and regional analysis
+- Add further analytical methods and forecasting
+
+## 👨‍💻 Author
+
+**Kishan Lal Kumawat**
+
+- GitHub: [@kishan-kumawat112](https://github.com/kishan-kumawat112)
+
 
